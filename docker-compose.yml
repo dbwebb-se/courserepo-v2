@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+
+  python:
+    build:
+      context: .docker/python
+      dockerfile: Dockerfile
+    volumes:
+      - .:/home/dbw
+
+  csharp:
+    #image: mcr.microsoft.com/dotnet/sdk
+    build:
+      context: .docker/csharp
+      dockerfile: Dockerfile
+    volumes:
+      - .:/home/dbw
